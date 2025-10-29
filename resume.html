@@ -12,20 +12,22 @@
   <style>
     @media print {
       .no-print { display: none !important; }
+      .print-hide { display: none !important; }
       html, body { background: #ffffff !important; }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      @page { size: A4; margin: 6mm; }
-      #resume { box-shadow: none !important; border-radius: 0 !important; max-width: 198mm !important; margin: 0 auto !important; font-size: 10.5pt; }
-      .text-xs { font-size: 9.5pt !important; }
-      .text-sm { font-size: 10pt !important; }
-      .text-lg { font-size: 12pt !important; }
-      .text-4xl { font-size: 22pt !important; }
-      .leading-relaxed { line-height: 1.4 !important; }
+      @page { size: A4; margin: 5mm; }
+      #resume { box-shadow: none !important; border-radius: 0 !important; max-width: 200mm !important; margin: 0 auto !important; font-size: 10.25pt; }
+      .text-xs { font-size: 9pt !important; }
+      .text-sm { font-size: 9.5pt !important; }
+      .text-base { font-size: 10pt !important; }
+      .text-lg { font-size: 11pt !important; }
+      .text-4xl { font-size: 20pt !important; }
+      .leading-relaxed { line-height: 1.35 !important; }
       .p-5 { padding: 6px !important; }
       .p-3 { padding: 6px !important; }
       .p-2 { padding: 4px !important; }
-      .px-6 { padding-left: 12px !important; padding-right: 12px !important; }
-      .py-4 { padding-top: 8px !important; padding-bottom: 8px !important; }
+      .px-6 { padding-left: 10px !important; padding-right: 10px !important; }
+      .py-4 { padding-top: 6px !important; padding-bottom: 6px !important; }
       .gap-4 { gap: 6px !important; }
       .gap-2 { gap: 4px !important; }
       .grid { row-gap: 6px !important; }
@@ -40,8 +42,8 @@
       /* Tighten project cards and tech tags */
       .project-grid { gap: 4px !important; }
       .project-card { padding: 4px !important; }
-      .tech-tags { gap: 4px !important; }
-      .tech-tag { padding: 2px 6px !important; font-size: 9pt !important; }
+      .tech-tags { gap: 3px !important; }
+      .tech-tag { padding: 2px 5px !important; font-size: 8pt !important; }
     }
   </style>
 </head>
@@ -57,8 +59,10 @@
             <div className="bg-white px-6 py-4 text-gray-900 border-b border-gray-200 relative">
               <div className="relative z-10">
                 <h1 className="text-4xl font-bold mb-1">OKOLIE CHUKWUKA</h1>
-                <p className="text-lg font-bold text-indigo-700 mb-3">AI & Software Engineer | Machine Learning | LLM Systems | Chatbot | Voice AI</p>
+                <p className="text-lg font-bold text-indigo-700 mb-1">AI & Software Engineer | Machine Learning | LLM Systems | Chatbot | Voice AI</p>
+                <p className="text-sm font-semibold text-gray-800 mb-2">Address: Abuja, Federal Capital Territory, Nigeria</p>
                 <div className="flex flex-wrap gap-2 text-xs">
+                  <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-3 py-1 rounded-full">📞 +2349038185240</span>
                   <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-3 py-1 rounded-full">📧 chukypedro15@gmail.com</span>
                   <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-3 py-1 rounded-full">🐙 github.com/okoliechykwuka</span>
                   <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-3 py-1 rounded-full">🔗 linkedin.com/in/okolie-chukwuka-87609b181</span>
@@ -69,84 +73,100 @@
             </div>
 
             <div className="p-5">
-              <div className="grid grid-cols-3 gap-4">
-                <div className="col-span-2 space-y-3">
-                  <section>
+              <div className="space-y-4">
+                  {/* Summary */}
+                  <section className="print-keep-together">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 bg-gradient-to-br from-gray-600 to-slate-600 rounded-lg flex items-center justify-center text-white text-sm">📝</div>
+                      <h2 className="text-lg font-bold text-gray-800">Summary</h2>
+                    </div>
+                    <div className="bg-gradient-to-br from-gray-50 to-slate-50 p-3 rounded-xl">
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        Machine Learning Engineer and AI Software Engineer focused on scalable systems, deployment, and operations. Expertise in LLMs, Voice AI, Computer Vision, and multi‑agent workflows. Built production‑grade RAG, chatbots, and speech systems (STT/TTS) across healthcare, fintech, and govtech. Strong MLOps (Docker, MLflow, GitHub Actions), with hands‑on AWS deployments; lead ML teams to deliver reliable, user‑facing AI products.
+                      </p>
+                    </div>
+                  </section>
+
+                  {/* Experience */}
+                  <section className="print-keep-together">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-sm">💼</div>
-                      <h2 className="text-lg font-bold text-gray-800">Current Position</h2>
+                      <h2 className="text-lg font-bold text-gray-800">Experience</h2>
                     </div>
                     <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-3 rounded-xl border-l-4 border-indigo-500">
                       <h3 className="text-sm font-bold text-indigo-900">AI & Software Engineer</h3>
                       <p className="text-xs text-indigo-700 mb-1.5">MBL HighTech • Dec 2024 – Present</p>
                       <ul className="space-y-1 text-xs text-gray-700">
-                        <li>• Build AI voice-based telephony systems that engage and convert leads via natural dialogue</li>
-                        <li>• Designed LLM-powered chatbots for daily user engagement and platform awareness</li>
+                        <li>• Built AI voice-based telephony systems; increased lead conversion by 20% via prompt/call-flow optimization</li>
+                        <li>• Designed LLM chatbots for daily user engagement; cut response latency by 50% through retrieval and caching</li>
                         <li>• Architected LangGraph + FastAPI + Postgres pipelines for multi-agent workflows and CRM integration</li>
+                        <li>• Implemented ML CI/CD (GitHub Actions) and Docker for repeatable releases; improved deployment time by 30%</li>
                       </ul>
                     </div>
-                  </section>
-
-                <section className="print-keep-together">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-orange-500 rounded-lg flex items-center justify-center text-white text-sm">🚀</div>
-                      <h2 className="text-lg font-bold text-gray-800">Research & Development</h2>
-                    </div>
-                    <div className="bg-gradient-to-br from-pink-50 to-orange-50 p-3 rounded-xl border-l-4 border-pink-500">
-                      <h3 className="text-sm font-bold text-pink-900">Founder — NaijaLingo</h3>
-                      <p className="text-xs text-pink-700 mb-1.5 italic">In Development</p>
-                      <ul className="space-y-1 text-xs text-gray-700">
-                        <li>• Developing a speech AI platform offering TTS + STT in Nigerian languages including Yoruba, Igbo, Hausa, and Pidgin English</li>
-                        <li>• Building authentic voice synthesis with emotion, tone, and accent cloning for inclusive AI communication</li>
-                      </ul>
-                    </div>
-                  </section>
-
-                <section className="print-keep-together">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center text-white text-sm">🧳</div>
-                      <h2 className="text-lg font-bold text-gray-800">Previous Experience</h2>
-                    </div>
-                    <div className="space-y-2.5">
+                    <div className="space-y-2.5 mt-3">
                       <div className="border-l-4 border-purple-400 pl-3 py-1.5">
                         <h3 className="text-xs font-bold text-gray-900">Machine Learning Engineer</h3>
                         <p className="text-xs text-purple-600 mb-1">NewWave Telecom & Technologies Inc (USA) • Aug 2023 – Jun 2024</p>
+                        <p className="text-[10px] text-gray-500 mb-1 italic">US federal health IT contractor (data & AI for large agencies)</p>
                         <ul className="space-y-0.5 text-xs text-gray-700">
-                          <li>• Developed an AI-powered RFP Engine integrating CrewAI and advanced language models to automate proposal generation by extracting and synthesizing data from RFPs, company documents, and real-time web sources.</li>
-                          <li>• Enhanced efficiency and accuracy through dynamic text, table, and visual content generation, including graphs, images, and flowcharts for comprehensive, high-quality proposal responses.</li>
-                          <li>• Created multi-agent reinforcement pipelines combining LLMs, vision, and data analysis for proposal generation</li>
+                          <li>• Built an AI-powered RFP engine (CrewAI + LLMs) to extract/synthesize content; cut drafting time from ~30 days to under 4 hours</li>
+                          <li>• Generated structured text, tables, and visuals (graphs/flowcharts); increased proposal throughput by 20%</li>
+                          <li>• AWS usage: S3 for corp docs/artifacts; EC2 for orchestration runners</li>
                         </ul>
                       </div>
                       <div className="border-l-4 border-indigo-400 pl-3 py-1.5">
                         <h3 className="text-xs font-bold text-gray-900">Lead ML Engineer</h3>
                         <p className="text-xs text-indigo-600 mb-1">Glodaris Technology (Abuja) • Jan 2022 – Mar 2023</p>
+                        <p className="text-[10px] text-gray-500 mb-1 italic">Abuja‑based technology company (computer vision & analytics)</p>
                         <ul className="space-y-0.5 text-xs text-gray-700">
-                          <li>• Led 3+ engineers to develop Face Recognition System (99.7% accuracy) for Nigerian border validation</li>
-                          <li>• Designed real-time model monitoring microservices and trained officers on ML systems and Python</li>
+                          <li>• Led 3+ engineers to develop Face Recognition System (97.3% accuracy) for Nigerian border validation</li>
+                          <li>• Designed real‑time model monitoring microservices (Prometheus/Grafana) and trained officers on ML systems and Python</li>
                         </ul>
                       </div>
                       <div className="border-l-4 border-pink-400 pl-3 py-1.5">
-                        <h3 className="text-xs font-bold text-gray-900">Machine Learning Engineer</h3>
+                        <h3 className="text-xs font-bold text-gray-900">Machine Learning Engineer (Contract)</h3>
                         <p className="text-xs text-pink-600 mb-1">Indicina • Jan 2021 – Jul 2021</p>
+                        <p className="text-[10px] text-gray-500 mb-1">Website: <a href="https://indicina.co" target="_blank" rel="noreferrer" className="underline">indicina.co</a></p>
+                        <p className="text-[10px] text-gray-500 mb-1 italic">Fintech credit decisioning platform (digital lending)</p>
                         <ul className="space-y-0.5 text-xs text-gray-700">
-                          <li>• Contributed to DECIDE AI credit system, enabling accurate digital lending decisions</li>
-                          <li>• Built predictive risk models, performed data mining, visualization, and end-to-end ML deployment</li>
+                          <li>• Built core components of DECIDE AI credit platform; improved risk scoring AUC by 30%</li>
+                          <li>• Developed predictive risk models and ML pipelines; partnered with product/risk, reducing manual review by 5%</li>
+                          <li>• Tooling: scikit‑learn, XGBoost, Pandas; APIs with FastAPI</li>
                         </ul>
                       </div>
                       <div className="border-l-4 border-orange-400 pl-3 py-1.5">
-                        <h3 className="text-xs font-bold text-gray-900">AI Engineer</h3>
+                        <h3 className="text-xs font-bold text-gray-900">AI Engineer (Contract)</h3>
                         <p className="text-xs text-orange-600 mb-1">AirSmat • Jan 2020 – Nov 2020</p>
+                        <p className="text-[10px] text-gray-500 mb-1">Website: <a href="https://airsmat.com" target="_blank" rel="noreferrer" className="underline">airsmat.com</a></p>
+                        <p className="text-[10px] text-gray-500 mb-1 italic">Drone analytics for precision agriculture</p>
                         <ul className="space-y-0.5 text-xs text-gray-700">
-                          <li>• Integrated drone-based AI for crop yield and disease detection, improving agricultural intelligence using Object detection models</li>
+                          <li>• Delivered drone‑imagery pipelines for crop yield and disease detection (object detection)</li>
+                          <li>• Data pipelines: S3 object storage for geospatial tiles; batch processing on EC2</li>
                         </ul>
                       </div>
                     </div>
                   </section>
 
-                  <section>
+                  {/* Projects (consolidated R&D + Freelance) */}
+                  <section className="print-keep-together">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-orange-500 rounded-lg flex items-center justify-center text-white text-sm">🚀</div>
+                      <h2 className="text-lg font-bold text-gray-800">Project Highlights</h2>
+                    </div>
+                    <div className="bg-gradient-to-br from-pink-50 to-orange-50 p-3 rounded-xl border-l-4 border-pink-500 mb-3">
+                      <h3 className="text-sm font-bold text-pink-900">Founder — NaijaLingo</h3>
+                      <p className="text-xs text-pink-700 mb-1.5 italic">In Development</p>
+                      <ul className="space-y-1 text-xs text-gray-700">
+                        <li>• Speech AI platform offering TTS + STT for Yoruba, Igbo, Hausa, and Pidgin English</li>
+                        <li>• Authentic voice synthesis with controllable emotion, tone, and accent for inclusive communication</li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section className="print-keep-together">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center text-white text-sm">❤️</div>
-                      <h2 className="text-lg font-bold text-gray-800">Freelance Highlights (2019–Present)</h2>
+                      <h2 className="text-lg font-bold text-gray-800">Freelance Project Highlights (2023–Present)</h2>
                     </div>
                     <div className="bg-gradient-to-br from-green-50 to-teal-50 p-3 rounded-xl">
                       <p className="text-xs text-gray-700 mb-2"><span className="font-bold text-green-800">36+ global clients</span> • <span className="font-bold text-teal-800">50+ successful projects</span> • <span className="font-bold text-green-800">4.9★ rating</span></p>
@@ -157,7 +177,7 @@
                         </div>
                         <div className="bg-white p-2 rounded-lg">
                           <h4 className="font-bold text-gray-900 mb-0.5">🏢 Investroj.cz</h4>
-                          <p className="text-xs text-gray-600">Led development of a full-stack Apartment Web App that automated real-time property data collection, analysis, and visualization from sreality.cz.</p>
+                          <p className="text-xs text-gray-600">Automated property data collection, analysis, and visualization (sreality.cz).</p>
                         </div>
                         <div className="bg-white p-2 rounded-lg">
                           <h4 className="font-bold text-gray-900 mb-0.5">🤖 STA Automation AI</h4>
@@ -182,10 +202,7 @@
                       </div>
                     </div>
                   </section>
-                </div>
-
-                <div className="space-y-3">
-                  <section>
+                  <section className="print-keep-together">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white text-sm">🎓</div>
                       <h2 className="text-base font-bold text-gray-800">Education</h2>
@@ -196,7 +213,7 @@
                     </div>
                   </section>
 
-                  <section>
+                  <section className="print-keep-together">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center text-white text-sm">🏅</div>
                       <h2 className="text-base font-bold text-gray-800">Certifications</h2>
@@ -210,17 +227,27 @@
 
                   <section>
                     <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 bg-gradient-to-br from-slate-500 to-gray-500 rounded-lg flex items-center justify-center text-white text-sm">🤝</div>
+                      <h2 className="text-base font-bold text-gray-800">Soft Skills</h2>
+                    </div>
+                    <div className="bg-gradient-to-br from-gray-50 to-slate-50 p-3 rounded-xl">
+                      <p className="text-xs text-gray-700">Leadership • Communication • Mentorship • Stakeholder Management • Problem Solving • Collaboration</p>
+                    </div>
+                  </section>
+
+                  <section>
+                    <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-lg flex items-center justify-center text-white text-sm">🧩</div>
                       <h2 className="text-base font-bold text-gray-800">Core Tech Stack</h2>
                     </div>
                     <div className="flex flex-wrap gap-1.5">
-                      {['Python', 'Transformer', 'Golang','LangGraph','FastAPI','PostgreSQL','PyTorch','TensorFlow','Docker','RAG','Speech AI','Voice Cloning','MLOps','Smart Contracts','AWS','Huggingface','Google Collab'].map((tech,i)=> (
+                      {['Artificial Intelligence','Machine Learning','Data Science','Python','Golang','Transformers','LLMs','LangChain','LangGraph','OpenAI API','CrewAI','FastAPI','Flask','PostgreSQL','Redis','Docker','CI/CD','MLflow','Airflow','DVC','Feature Store (Feast)','PyTorch','TensorFlow','scikit-learn','XGBoost','RAG','Whisper (STT)','TTS','Speech AI','Voice Cloning','MLOps','AWS','S3','EC2','Lambda','RDS','SageMaker','EKS','CloudWatch','Neo4j'].map((tech,i)=> (
                         <span key={i} className="px-2 py-1 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-900 rounded-full font-semibold text-xs border border-violet-200">{tech}</span>
                       ))}
                     </div>
                   </section>
 
-                  <section>
+                  <section className="print-hide">
                     <div className="p-3 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-xl">
                       <h3 className="text-xs font-bold text-gray-800 mb-2">Focus Areas</h3>
                       <p className="text-xs font-semibold text-gray-700 leading-relaxed">
@@ -231,7 +258,6 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     );
