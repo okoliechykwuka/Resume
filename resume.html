@@ -39,11 +39,15 @@
       .rounded-2xl, .rounded-xl { break-inside: avoid; page-break-inside: avoid; }
       section { break-inside: avoid; page-break-inside: avoid; }
       .print-keep-together { break-inside: avoid; page-break-inside: avoid; }
+      .print-break-before { break-before: page; page-break-before: always; }
+      .print-splittable { break-inside: auto; page-break-inside: auto; }
       /* Tighten project cards and tech tags */
       .project-grid { gap: 4px !important; }
       .project-card { padding: 4px !important; }
       .tech-tags { gap: 3px !important; }
       .tech-tag { padding: 2px 5px !important; font-size: 8pt !important; }
+      /* Limit tech items to keep within 2 pages */
+      .tech-tags .tech-tag:nth-child(n+19) { display: none !important; }
     }
   </style>
 </head>
@@ -68,6 +72,7 @@
                   <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-3 py-1 rounded-full">🔗 linkedin.com/in/okolie-chukwuka-87609b181</span>
                   <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-3 py-1 rounded-full">🌐 okoliechykwuka.github.io/portfolio</span>
                   <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-3 py-1 rounded-full">🤗 huggingface.co/chukypedro</span>
+                  <span className="flex items-center gap-1.5 bg-indigo-50 border border-indigo-300 text-indigo-800 font-bold px-3 py-1 rounded-full">Experience: 7 years</span>
                 </div>
               </div>
             </div>
@@ -88,14 +93,40 @@
                   </section>
 
                   {/* Experience */}
-                  <section className="print-keep-together">
+                  <section className="print-splittable">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-sm">💼</div>
                       <h2 className="text-lg font-bold text-gray-800">Experience</h2>
                     </div>
+                    {/* 9jalingoAI */}
+                    <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-3 rounded-xl border-l-4 border-indigo-500 mb-3">
+                      <h3 className="text-sm font-bold text-indigo-900">Founder and CEO</h3>
+                      <p className="text-xs text-indigo-700 mb-1.5">9jalingoAI • Apr 2026 – Present</p>
+                      <p className="text-[10px] text-gray-500 mb-1">Website: <a href="https://www.9jalingo.org" target="_blank" rel="noreferrer" className="underline">www.9jalingo.org</a></p>
+                      <p className="text-[10px] text-gray-500 mb-1 italic">Full-time • Remote (Federal Capital Territory, Nigeria)</p>
+                      <p className="text-xs text-gray-700 mb-2">Lead the development of cutting-edge AI solutions for natural text-to-speech, speech-to-text, voice AI, and language tools tailored to Yoruba, Hausa, Igbo, Pidgin, and Nigerian-accented English.</p>
+                      <ul className="space-y-1 text-xs text-gray-700">
+                        <li>• Built an AI-driven platform supporting multiple Nigerian languages for speech synthesis and recognition.</li>
+                        <li>• Developed scalable tools for businesses, developers, and creators to integrate African language AI into applications.</li>
+                        <li>• Advocated for inclusive digital technology that preserves and promotes African linguistic heritage.</li>
+                      </ul>
+                    </div>
+                    {/* MBL HighTech — AI Team Lead */}
+                    <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-3 rounded-xl border-l-4 border-indigo-500 mb-3">
+                      <h3 className="text-sm font-bold text-indigo-900">AI Team Lead</h3>
+                      <p className="text-xs text-indigo-700 mb-1.5">MBL HighTech • Jan 2026 – Present</p>
+                      <p className="text-[10px] text-gray-500 mb-1 italic">Full-time • On-site (Nigeria)</p>
+                      <ul className="space-y-1 text-xs text-gray-700">
+                        <li>• Built ClientLens, an AI-powered CRM client similarity engine that uses vector embeddings and real-time nearest-neighbor search to detect lookalike customers, prevent churn, and perform client cluster analysis.</li>
+                        <li>• Oversaw automation of CRM workflows with n8n, integrating APIs, databases, and AI services for lead ingestion, enrichment, and follow‑ups</li>
+                        <li>• Directed LLM/ML pipeline evaluations; defined benchmarks for latency, accuracy, and reliability to guide model selection and prompt iteration</li>
+                        <li>• Led R&D of voice‑based AI systems: telephony services, speech signal processing, and custom TTS experimentation with transformer architectures</li>
+                      </ul>
+                    </div>
                     <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-3 rounded-xl border-l-4 border-indigo-500">
                       <h3 className="text-sm font-bold text-indigo-900">AI & Software Engineer</h3>
-                      <p className="text-xs text-indigo-700 mb-1.5">MBL HighTech • Dec 2024 – Present</p>
+                      <p className="text-xs text-indigo-700 mb-1.5">MBL HighTech • Dec 2024 – Dec 2025</p>
+                      {/* Company details shown above to avoid repetition */}
                       <ul className="space-y-1 text-xs text-gray-700">
                         <li>• Built AI voice-based telephony systems; increased lead conversion by 20% via prompt/call-flow optimization</li>
                         <li>• Designed LLM chatbots for daily user engagement; cut response latency by 50% through retrieval and caching</li>
@@ -150,21 +181,6 @@
                   {/* Projects (consolidated R&D + Freelance) */}
                   <section className="print-keep-together">
                     <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-orange-500 rounded-lg flex items-center justify-center text-white text-sm">🚀</div>
-                      <h2 className="text-lg font-bold text-gray-800">Project Highlights</h2>
-                    </div>
-                    <div className="bg-gradient-to-br from-pink-50 to-orange-50 p-3 rounded-xl border-l-4 border-pink-500 mb-3">
-                      <h3 className="text-sm font-bold text-pink-900">Founder — NaijaLingo</h3>
-                      <p className="text-xs text-pink-700 mb-1.5 italic">In Development</p>
-                      <ul className="space-y-1 text-xs text-gray-700">
-                        <li>• Speech AI platform offering TTS + STT for Yoruba, Igbo, Hausa, and Pidgin English</li>
-                        <li>• Authentic voice synthesis with controllable emotion, tone, and accent for inclusive communication</li>
-                      </ul>
-                    </div>
-                  </section>
-
-                  <section className="print-keep-together">
-                    <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center text-white text-sm">❤️</div>
                       <h2 className="text-lg font-bold text-gray-800">Freelance Project Highlights (2023–Present)</h2>
                     </div>
@@ -187,15 +203,7 @@
                           <h4 className="font-bold text-gray-900 mb-0.5">🗳️ DAO Voting Agent</h4>
                           <p className="text-xs text-gray-600">FastAPI + Web3.py + LangChain for conversational blockchain voting</p>
                         </div>
-                        <div className="bg-white p-2 rounded-lg">
-                          <h4 className="font-bold text-gray-900 mb-0.5">📘 Theoriq Docs Assistant</h4>
-                          <p className="text-xs text-gray-600">RAG-based agent using Embedchain and Flask</p>
-                        </div>
-                        <div className="bg-white p-2 rounded-lg">
-                          <h4 className="font-bold text-gray-900 mb-0.5">🎉 Naija Messenger</h4>
-                          <p className="text-xs text-gray-600">Golang app automating WhatsApp birthday wishes with AI</p>
-                        </div>
-                        <div className="bg-white p-2 rounded-lg">
+                        <div className="bg-white p-2 rounded-lg print-hide">
                           <h4 className="font-bold text-gray-900 mb-0.5"> 🧠 LLM based Text and Audio data Model Training and Fine-tuning</h4>
                           <p className="text-xs text-gray-600">Trained a variety of models for text and audio data using LLMs, TTS and STT models and fine-tuned them for specific tasks.</p>
                         </div>
@@ -212,7 +220,6 @@
                       <p className="text-xs text-blue-700">University of Benin</p>
                     </div>
                   </section>
-
                   <section className="print-keep-together">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center text-white text-sm">🏅</div>
@@ -235,19 +242,19 @@
                     </div>
                   </section>
 
-                  <section>
+                  <section className="print-splittable">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-lg flex items-center justify-center text-white text-sm">🧩</div>
                       <h2 className="text-base font-bold text-gray-800">Core Tech Stack</h2>
                     </div>
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="tech-tags flex flex-wrap gap-1.5">
                       {['Artificial Intelligence','Machine Learning','Data Science','Python','Golang','Transformers','LLMs','LangChain','LangGraph','OpenAI API','CrewAI','FastAPI','Flask','PostgreSQL','Redis','Docker','CI/CD','MLflow','Airflow','DVC','Feature Store (Feast)','PyTorch','TensorFlow','scikit-learn','XGBoost','RAG','Whisper (STT)','TTS','Speech AI','Voice Cloning','MLOps','AWS','S3','EC2','Lambda','RDS','SageMaker','EKS','CloudWatch','Neo4j'].map((tech,i)=> (
-                        <span key={i} className="px-2 py-1 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-900 rounded-full font-semibold text-xs border border-violet-200">{tech}</span>
+                        <span key={i} className="tech-tag px-2 py-1 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-900 rounded-full font-semibold text-xs border border-violet-200">{tech}</span>
                       ))}
                     </div>
                   </section>
 
-                  <section className="print-hide">
+                  <section className="print-keep-together">
                     <div className="p-3 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 rounded-xl">
                       <h3 className="text-xs font-bold text-gray-800 mb-2">Focus Areas</h3>
                       <p className="text-xs font-semibold text-gray-700 leading-relaxed">
